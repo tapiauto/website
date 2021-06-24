@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% include head.html %}
+</head>
+<body>
+	<div class="container">
+		<div class="post-back">
+			<a href="{% link fotografii/index.html %}"><i class="fas fa-arrow-left"></i> Inapoi la galerie</a>
+		</div>
+
+		<div class="post">
+			{{ content }}
+		</div>
+	</div>
+
+	{% include footer.html %}
+</body>
+</html>

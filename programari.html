@@ -1,0 +1,51 @@
+---
+layout: default
+title: Programari
+permalink: /programari
+---
+
+{% include header-dark.html %}
+
+<div class="container">
+		<div class="title-medium">
+
+			<center><h2>PROGRAMARI</h2></center>
+			<hr><br>
+
+			<div class="container">
+
+				<div class="form-container">
+					<form action="https://formspree.io/f/mzbyvpqy" method="POST">
+						<p>Nume:</p>
+						<input type="text" name="Nume" class="textbox" required>
+						<p>Prenume:</p>
+						<input type="text" name="Prenume" class="textbox" required>
+						<p>Email:</p>
+						<input type="email" name="Email" class="textbox" required>
+						<p>Telefon:</p>
+						<input type="text" name="Telefon" value="07" class="textbox" required>
+
+						<p>Tip reparatie:</p>
+						<select class="textbox" name="Tip" style="height: 40px;" required>
+							<option value="" disabled selected>Alege</option>
+							<option value="volan">Volan</option>
+					        <option value="scaun">Scaun</option>
+					        <option value="plafon">Plafon</option>
+					        <option value="altceva">Altceva</option>
+						</select>
+						<p>Descriere reparatie:</p>
+						<textarea type="text" name="Descriere" required></textarea>
+
+						<input type="checkbox" name="accept" id="accept" class="checkbox" required>
+						<label for="accept">Accept sa fiu contactat telefonic pentru confirmarea programarii.</label>
+
+						<button type="submit">Trimite</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>

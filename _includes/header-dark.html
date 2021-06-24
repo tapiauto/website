@@ -1,0 +1,39 @@
+<header class="dark">
+	<div class="container">
+		<a href="{% link index.html %}">
+			<img src="{{site.baseurl}}/assets/img/logo.png" class="logo-img">
+			<h3 class="logo">Tapi Auto</h3>
+		</a>
+
+		<input type="checkbox" id="chk">
+		<label for="chk" class="show-menu-btn">
+			<i class="fas fa-bars"></i>
+		</label>
+
+		<ul class="menu">
+			{% if page.title == "Despre" %}
+				<a href="{% link despre.html %}" class="selected">Despre</a>
+			{% else %}
+				<a href="{% link despre.html %}">Despre</a>
+			{% endif %}
+			{% if page.title == "Galerie" %}
+				<a href="{% link fotografii/index.html %}" class="selected">Fotografii</a>
+			{% else %}
+				<a href="{% link fotografii/index.html %}">Fotografii</a>
+			{% endif %}
+			{% if page.title == "Programari" %}
+				<a href="{% link programari.html %}" class="selected">Programari</a>
+			{% else %}
+				<a href="{% link programari.html %}">Programari</a>
+			{% endif %}
+			{% if page.title == "Contact" %}
+				<a href="{% link contact.html %}" class="selected">Contact</a>
+			{% else %}
+				<a href="{% link contact.html %}">Contact</a>
+			{% endif %}
+			<label for="chk" class="hide-menu-btn">
+				<i class="fas fa-times"></i>
+			</label>
+		</ul>
+	</div>
+</header>

@@ -1,0 +1,42 @@
+---
+layout: default
+title: Galerie
+---
+
+{% include header-dark.html %}
+
+<div class="container">
+	<div class="title-medium">
+		<center><h2>GALERIE</h2></center>
+		<hr><br>
+	</div>
+
+	<div class="gallery">
+	  {% for post in paginator.posts %}
+	    	<div class="pic">
+	      		<a href="{{ post.url }}">
+				<div class="img-tag">{{ post.img-tag }}</div>
+				<img src="{{site.baseurl}}{{ post.img-url }}">
+				</a>
+	    	</div>
+	  	{% endfor %}
+	</div>
+
+	<div class="pagination-pages">
+  	{% for page_number in (1..paginator.total_pages) %}
+  		{% if page_number == paginator.page %}
+  			{% if page_number == 1 %}
+  				<span><a href="{{site.baseurl}}/fotografii" id="current">{{ page_number }}</a></span>
+	  		{% else %}
+	  			<span><a href="{{site.baseurl}}/fotografii/page{{ page_number }}" id="current">{{ page_number }}</a></span>
+	  		{% endif %}
+  		{% else %}
+  			{% if page_number == 1 %}
+  				<span><a href="{{site.baseurl}}/fotografii">{{ page_number }}</a></span>
+	  		{% else %}
+	  			<span><a href="{{site.baseurl}}/fotografii/page{{ page_number }}">{{ page_number }}</a></span>
+	  		{% endif %}
+  		{% endif %}
+  	{% endfor %}
+  	</div>
+</div>
