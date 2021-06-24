@@ -11,24 +11,24 @@
 
 	<ul class="menu">
 		{% if page.title == "Despre" %}
-			<a href="{% link despre.html %}" class="selected">Despre</a>
+			<a href="{{ site.baseurl }}{% link despre.html %}" class="selected">Despre</a>
 		{% else %}
-			<a href="{% link despre.html %}">Despre</a>
+			<a href="{{ site.baseurl }}{% link despre.html %}">Despre</a>
 		{% endif %}
 		{% if page.title == "Galerie" %}
-			<a href="{% link fotografii/index.html %}" class="selected">Fotografii</a>
+			<a href="{{ site.baseurl }}{% link fotografii/index.html %}" class="selected">Fotografii</a>
 		{% else %}
-			<a href="{% link fotografii/index.html %}">Fotografii</a>
+			<a href="{{ site.baseurl }}{% link fotografii/index.html %}">Fotografii</a>
 		{% endif %}
 		{% if page.title == "Programari" %}
-			<a href="{% link programari.html %}" class="selected">Programari</a>
+			<a href="{{ site.baseurl }}{% link programari.html %}" class="selected">Programari</a>
 		{% else %}
-			<a href="{% link programari.html %}">Programari</a>
+			<a href="{{ site.baseurl }}{% link programari.html %}">Programari</a>
 		{% endif %}
 		{% if page.title == "Contact" %}
-			<a href="{% link contact.html %}" class="selected">Contact</a>
+			<a href="{{ site.baseurl }}{% link contact.html %}" class="selected">Contact</a>
 		{% else %}
-			<a href="{% link contact.html %}">Contact</a>
+			<a href="{{ site.baseurl }}{% link contact.html %}">Contact</a>
 		{% endif %}
 		<label for="chk" class="hide-menu-btn">
 			<i class="fas fa-times"></i>
